@@ -1,0 +1,40 @@
+{
+  "name": "bulk-image-download",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/bulk-image-download.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/bulk-image-download.js",
+      "require": "./dist/bulk-image-download.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:browser": "vitest",
+    "test:headless": "vitest --browser.headless"
+  },
+  "devDependencies": {
+    "@vitest/browser": "^3.0.5",
+    "jsdoc-to-markdown": "^9.1.1",
+    "msw": "^2.7.0",
+    "playwright": "^1.50.1",
+    "vite": "^6.2.2",
+    "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
