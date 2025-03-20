@@ -3,7 +3,7 @@
 import { expect, test } from "vitest";
 import setupPage from "./mocks/setupPage.js";
 import { getByText } from "@testing-library/dom";
-import { bulkImageDownload } from "../../lib/main.js";
+import { bulkImageDownload } from "../lib/main.js";
 
 function getUrlAndHeadersFromAssetsAndCounts(
     { host, rawCookies, csrfToken },
