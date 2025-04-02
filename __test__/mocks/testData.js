@@ -1,5 +1,6 @@
 export const testJson = {
     total: 1,
+    count: 1,
     profiles: [
         {
             name: "Cat",

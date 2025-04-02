@@ -47,8 +47,12 @@ function getImageUrlsAndMetadata(data) {
 }
 
 function getTotalFromResult(data) {
-    const total = data?.count;
+    const total = data?.total;
     return total;
+}
+
+function getUpdatedCountFromResult(data) {
+    return data?.count;
 }
 
 test("bulkImageDownload", async () => {
@@ -62,6 +66,7 @@ test("bulkImageDownload", async () => {
         getNeededAssetsFromPage,
         getTotalFromResult,
         getUrlAndHeadersFromAssetsAndCounts,
+        getUpdatedCountFromResult,
     });
     const modal = getByText(document.body, "Select Items to Include");
     await expect.element(modal).toBeInTheDocument();

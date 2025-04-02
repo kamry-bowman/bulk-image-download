@@ -51,6 +51,10 @@ function getTotalFromResult(data) {
     return total;
 }
 
+function getUpdatedCountFromResult(data) {
+    return data?.count;
+}
+
 test("downloadImagesAndMetadata", async () => {
     const parent = await setupPage();
     const element = getByText(parent, "Website");
@@ -61,6 +65,7 @@ test("downloadImagesAndMetadata", async () => {
         getNeededAssetsFromPage,
         getTotalFromResult,
         getUrlAndHeadersFromAssetsAndCounts,
+        getUpdatedCountFromResult,
         coolDown: 0,
     });
     expect(results).toBeDefined;
